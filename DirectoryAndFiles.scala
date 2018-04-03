@@ -47,7 +47,7 @@ class DirectoryAndFiles(directory: String, keyword: String) {
 
   def grebAll: List[io.Serializable] = recursiveGrebWithIndex(filesList.toList)
 
-  // tail recursive를 이용한 함수
+  // using tail recursive
   def recursiveGrebWithIndex(inFilesList: List[java.io.File]): List[io.Serializable] = {
     if (inFilesList.isEmpty) Nil
     else {
